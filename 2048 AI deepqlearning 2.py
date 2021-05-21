@@ -544,25 +544,25 @@ class DQNAgent:
     def create_model(self):
 
 
-        model = load_model("models/alt4_300k_150620.48avg_631612.00max_22104.00min_1615332006_.model") #To load previously used model
-        # model = Sequential()
+        # model = load_model("models/alt4_300k_150620.48avg_631612.00max_22104.00min_1615332006_.model") #To load previously used model
+        model = Sequential()
 
         ##parameeter##
-        # model.add(Conv2D(256, (1, 1), input_shape=(4, 4, 3)))  # OBSERVATION_SPACE_VALUES = (10, 10, 3) a 10x10 RGB image.
-        # model.add(Activation('relu'))
-        # model.add(MaxPooling2D(pool_size=(2, 2)))
-        # model.add(Dropout(0.1))
+        model.add(Conv2D(256, (1, 1), input_shape=(4, 4, 3)))  # OBSERVATION_SPACE_VALUES = (10, 10, 3) a 10x10 RGB image.
+        model.add(Activation('relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.1))
 
-        # model.add(Conv2D(256, (1, 1)))
-        # model.add(Activation('relu'))
-        # model.add(MaxPooling2D(pool_size=(2, 2)))
-        # model.add(Dropout(0.1))
+        model.add(Conv2D(256, (1, 1)))
+        model.add(Activation('relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.1))
 
-        # model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
-        # model.add(Dense(64))
+        model.add(Flatten())  # this converts our 3D feature maps to 1D feature vectors
+        model.add(Dense(64))
 
-        # model.add(Dense(env.ACTION_SPACE_SIZE, activation='linear'))  # ACTION_SPACE_SIZE = how many choices (9)
-        # model.compile(loss="mse", optimizer=Adam(lr=0.001), metrics=['accuracy'])
+        model.add(Dense(env.ACTION_SPACE_SIZE, activation='linear'))  # ACTION_SPACE_SIZE = how many choices (9)
+        model.compile(loss="mse", optimizer=Adam(lr=0.001), metrics=['accuracy'])
         return model
 
     # Adds step's data to a memory replay array
