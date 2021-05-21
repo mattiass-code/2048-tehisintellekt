@@ -1,0 +1,16 @@
+Internetist:
+Python 3.7.9
+
+Installimiseks läbi cmd vms:
+pip install matplotlib
+pip install Pillow
+pip install numpy
+pip install tensorflow==1.13.1
+pip install Keras==2.2.4
+pip install h5py==2.10.0
+pip install opencv-python
+
+Tulemuste vaatamiseks (cmd-sse):
+cd C:\tee\logs\folderisse (ilmselt lõpeb \tehisintellekt\logs)
+tensorboard --logdir C:\tee\logs\folderisse
+(siis copy internetti link, mis teksti lõpus antakse, ilmselt midagi sarnast: http://DESKTOP-3OC1EG2:6006)
