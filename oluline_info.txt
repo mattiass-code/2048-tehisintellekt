@@ -1,3 +1,5 @@
+Programmi töötamiseks lae alla järgmised:
+
 Internetist:
 Python 3.7.9
 
