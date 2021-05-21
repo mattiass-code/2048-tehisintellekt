@@ -22,8 +22,6 @@ current_points = 0
 maximum_reward = 0
 reward = 0
 
-show = False # show game grid
-
 ##############################
 ##############################
 
@@ -39,8 +37,8 @@ MIN_REWARD_C = 0  # For model save
 MEMORY_FRACTION = 0.20#0.20
 
 # Environment settings
-EPISODES = 16_000 ##parameeter##
-EPISODE_LABEL = "16k"
+EPISODES = 10_000 ##parameeter##
+EPISODE_LABEL = "10k"
 
 SAMPLE_SIZE = 20
 MODULE_VALUE = EPISODES / SAMPLE_SIZE
